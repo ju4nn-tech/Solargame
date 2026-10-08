@@ -1,0 +1,460 @@
+package main1;
+import java.util.Scanner;
+import java.util.Random;
+public class luna {
+	public static void esperar(int tiempo) {
+	    try {
+	        Thread.sleep(tiempo);
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+public static void iniciar(){
+	int combustible=500;
+int oxigeno=100;
+int comida=100;
+int vidanave=1000;
+int turno=0;
+int t=0;
+int agua=50;
+
+boolean activo=true;
+Scanner sc=new Scanner(System.in);
+Random rm=new Random();
+
+	for (turno=1;turno<=5 && activo;turno++) {
+		    int ev=rm.nextInt(5)+1;
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	System.out.println("| TURNO: "+turno+"/5                    |");
+	System.out.println("|                                       |");
+	System.out.println("| COMBUSTIBLE "+combustible+"/500       |");
+	System.out.println("| O₂:    "+oxigeno+"/100                |");
+	System.out.println("| COMIDA:"+comida+"/100                 |");
+	System.out.println("| VIDA  :"+vidanave+"/1000              |");
+	System.out.println("| Agua  :"+agua+" /50                   |");
+	System.out.println("|                                       |");
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	esperar(1000);
+	System.out.println("Cargando evento...3.");
+	esperar(1000);
+	System.out.println("..................2");
+	esperar(1000);
+	System.out.println("..................1");
+	esperar(1000);
+	switch (ev) {
+    case 1:
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    	System.out.println("|     EVENTO! INCENDIO EN LA CABINA     |");
+    	System.out.println("|                                       |");    
+    	System.out.println("| TURNO: "+turno+"/5                    |");
+    	System.out.println("|                                       |");
+    	System.out.println("|                                       |");
+    	System.out.println("| COMBUSTIBLE "+combustible+"/500       |");
+    	System.out.println("| O₂:    "+oxigeno+"/100                |");
+    	System.out.println("| COMIDA:"+comida+"/100                 |");
+    	System.out.println("| VIDA  :"+vidanave+"/1000              |");
+    	System.out.println("| Agua  :"+agua+" /50                   |");
+    	System.out.println("|                                       |");
+    	System.out.println("| 1. Ignorar (vida-500hp)               |");
+    	System.out.println("| 2. Apagar  (agua-20)                  |");
+    	System.out.println("| 3. Enviar otro tripulante(comida-30)  |");
+    	System.out.println("| 4. Rendirse (vida-1000hp)             |");
+    	System.out.println("|                                       |");
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+t=sc.nextInt();
+switch (t) {
+case 1:
+	combustible=combustible-80;
+	vidanave=vidanave-500;
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	System.out.println("|  Ignoraste el incendio (daños graves) |");
+	System.out.println("|                                       |");    
+	System.out.println("| TURNO: "+turno+"/5                    |");
+	System.out.println("|                                       |");
+	System.out.println("|                                       |");
+	System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+	System.out.println("| O₂:    "+oxigeno+"/100                |");
+	System.out.println("| COMIDA:"+comida+"/100                 |");
+	System.out.println("| VIDA  :"+(vidanave)+"/1000        |");
+	System.out.println("| Agua  :"+agua+" /50                   |");
+	System.out.println("|                                       |");
+	System.out.println("|                                       |");
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	esperar(1000);
+	System.out.println("Siguiente turno en ...3.");
+	esperar(1000);
+	System.out.println("..................2");
+	esperar(1000);
+	System.out.println("..................1");
+	esperar(1000);
+	break;
+case 2:
+	combustible=combustible-80;
+	agua=agua-20;
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	System.out.println("|     Apagaste el incendio con exito!   |");
+	System.out.println("|                                       |");    
+	System.out.println("| TURNO: "+turno+"/5                    |");
+	System.out.println("|                                       |");
+	System.out.println("|                                       |");
+	System.out.println("| COMBUSTIBLE "+(combustible)+"/500     |");
+	System.out.println("| O₂:    "+oxigeno+"/100                |");
+	System.out.println("| COMIDA:"+comida+"/100                 |");
+	System.out.println("| VIDA  :"+(vidanave)+"/1000            |");
+	System.out.println("| Agua  :"+(agua)+" /50                 |");
+	System.out.println("|                                       |");
+	System.out.println("|                                       |");
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	esperar(1000);
+	System.out.println("Siguiente turno en ...3.");
+	esperar(1000);
+	System.out.println("..................2");
+	esperar(1000);
+	System.out.println("..................1");
+	esperar(1000);
+	break;
+case 3:
+	combustible=combustible-80;
+	comida=comida-30;
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	System.out.println("|        Enviaste un tripulante         |");
+	System.out.println("|                                       |");    
+	System.out.println("| TURNO: "+turno+"/5                    |");
+	System.out.println("|                                       |");
+	System.out.println("|                                       |");
+	System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+	System.out.println("| O₂:    "+oxigeno+"/100                |");
+	System.out.println("| COMIDA:"+(comida)+"/100            |");
+	System.out.println("| VIDA  :"+(vidanave)+"/1000            |");
+	System.out.println("| Agua  :"+(agua)+" /50                 |");
+	System.out.println("|                                       |");
+	System.out.println("|                                       |");
+	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+	esperar(1000);
+	System.out.println("Siguiente turno en ...3.");
+	esperar(1000);
+	System.out.println("..................2");
+	esperar(1000);
+	System.out.println("..................1");
+	esperar(1000);
+	break;
+case 4:
+	System.out.println("Te has rendido :(");
+	activo=false;
+	break;
+}break;
+    case 2:
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    	System.out.println("|   EVENTO! ALGO HA IMPACTADO LA NAVE   |");
+    	System.out.println("|                                       |");    
+    	System.out.println("| TURNO: "+turno+"/5                    |");
+    	System.out.println("|                                       |");
+    	System.out.println("|                                       |");
+    	System.out.println("| COMBUSTIBLE "+combustible+"/500       |");
+    	System.out.println("| O₂:    "+oxigeno+"/100                |");
+    	System.out.println("| COMIDA:"+comida+"/100                 |");
+    	System.out.println("| VIDA  :"+vidanave+"/1000              |");
+    	System.out.println("| Agua  :"+agua+" /50                   |");
+    	System.out.println("|                                       |");
+    	System.out.println("| 1. Ignorar (vida-300hp)               |");
+    	System.out.println("| 2. Reparar  (agua-10 y comida-20)     |");
+    	System.out.println("| 3. Enviar otro tripulante(comida-40)  |");
+    	System.out.println("| 4. Rendirse (vida-1000hp)             |");
+    	System.out.println("|                                       |");
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    	t=sc.nextInt();
+    	switch (t) {
+    	case 1:
+    		combustible=combustible-80;
+    		vidanave=vidanave-300;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|   Ignoraste el golpe (daños graves)   |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+comida+"/100                 |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000        |");
+    		System.out.println("| Agua  :"+agua+" /50                   |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 2:
+    		combustible=combustible-80;
+    		comida=comida-20;
+    		agua=agua-10;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|       Lo reparaste con exito!         |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+(comida)+"/100            |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000            |");
+    		System.out.println("| Agua  :"+(agua)+" /50              |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 3:
+    		combustible=combustible-80;
+    		comida=comida-40;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|        Enviaste un tripulante         |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+(comida)+"/100            |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000            |");
+    		System.out.println("| Agua  :"+(agua)+" /50                 |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 4:
+    		System.out.println("Te has rendido :(");
+    		activo=false;
+    		break;
+    	} 	break;
+    case 3:
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    	System.out.println("|     EVENTO! PERDIDA DE COMBUSTIBLE    |");
+    	System.out.println("|                                       |");    
+    	System.out.println("| TURNO: "+turno+"/5                    |");
+    	System.out.println("|                                       |");
+    	System.out.println("|                                       |");
+    	System.out.println("| COMBUSTIBLE "+combustible+"/500       |");
+    	System.out.println("| O₂:    "+oxigeno+"/100                |");
+    	System.out.println("| COMIDA:"+comida+"/100                 |");
+    	System.out.println("| VIDA  :"+vidanave+"/1000              |");
+    	System.out.println("| Agua  :"+agua+" /50                   |");
+    	System.out.println("|                                       |");
+    	System.out.println("| 1. Ignorar (combustible-150)          |");
+    	System.out.println("| 2. Reparar  (agua-20/comida-10)       |");
+    	System.out.println("| 3. Enviar otro tripulante(comida-30)  |");
+    	System.out.println("| 4. Rendirse (vida-1000hp)             |");
+    	System.out.println("|                                       |");
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    	t=sc.nextInt();
+   
+    	switch (t) {
+    	case 1:
+    		combustible=combustible-230;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("| Ignoraste la perdida (estado critico) |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500 |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+comida+"/100                 |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000        |");
+    		System.out.println("| Agua  :"+agua+" /50                   |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 2:
+    		combustible=combustible-80;
+    		comida=comida-10;
+    		agua=agua-20;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|       Lo reparaste con exito!         |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+(comida)+"/100            |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000            |");
+    		System.out.println("| Agua  :"+(agua)+" /50              |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 3:
+    		combustible=combustible-80;
+    		comida=comida-30;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|        Enviaste un tripulante         |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+(comida)+"/100            |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000            |");
+    		System.out.println("| Agua  :"+(agua)+" /50                 |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 4:
+    		System.out.println("Te has rendido :(");
+    		activo=false;
+    		break;
+    	} 	break;
+    case 4:
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    	System.out.println("|     EVENTO! PAQUETE DE RECURSOS       |");
+    	System.out.println("|                                       |");    
+    	System.out.println("| TURNO: "+turno+"/5                    |");
+    	System.out.println("|                                       |");
+    	System.out.println("|                                       |");
+    	System.out.println("| COMBUSTIBLE "+combustible+"/500       |");
+    	System.out.println("| O₂:    "+oxigeno+"/100                |");
+    	System.out.println("| COMIDA:"+comida+"/100                 |");
+    	System.out.println("| VIDA  :"+vidanave+"/1000              |");
+    	System.out.println("| Agua  :"+agua+" /50                   |");
+    	System.out.println("|                                       |");
+    	System.out.println("| 1.Aceptar (agua+20)                   |");
+    	System.out.println("| 2.Rechazar (vida+100)                 |");
+    	System.out.println("| 3.Aceptar una parte(comida+10&vida+50)|");
+    	System.out.println("| 4.Rendirse (vida-1000hp)              |");
+    	System.out.println("|                                       |");
+    	System.out.println("////////////////🌑 LUNA 🌑////////////////");
+     	
+    	t=sc.nextInt();
+    	break;
+    	
+    case 5:
+   
+    	switch (t) {
+    	case 1:
+    		combustible=combustible-80;
+    		agua=agua+20;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("| Ignoraste la perdida (estado critico) |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible-80)+"/500 |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+comida+"/100                 |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000        |");
+    		System.out.println("| Agua  :"+(agua)+" /50                   |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 2:
+    		combustible=combustible-80;
+    		vidanave=vidanave+100;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|       Lo reparaste con exito!         |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+(comida)+"/100               |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000        |");
+    		System.out.println("| Agua  :"+(agua)+" /50                 |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 3:
+    		combustible=combustible-80;
+    		comida=comida+10;
+    		vidanave=vidanave+50;
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		System.out.println("|        Enviaste un tripulante         |");
+    		System.out.println("|                                       |");    
+    		System.out.println("| TURNO: "+turno+"/5                    |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("| COMBUSTIBLE "+(combustible)+"/500  |");
+    		System.out.println("| O₂:    "+oxigeno+"/100                |");
+    		System.out.println("| COMIDA:"+(comida)+"/100            |");
+    		System.out.println("| VIDA  :"+(vidanave)+"/1000         |");
+    		System.out.println("| Agua  :"+(agua)+" /50                 |");
+    		System.out.println("|                                       |");
+    		System.out.println("|                                       |");
+    		System.out.println("////////////////🌑 LUNA 🌑////////////////");
+    		esperar(1000);
+    		System.out.println("Siguiente turno en ...3.");
+    		esperar(1000);
+    		System.out.println("..................2");
+    		esperar(1000);
+    		System.out.println("..................1");
+    		esperar(1000);
+    		break;
+    	case 4:
+    		System.out.println("Te has rendido :(");
+    		activo=false;
+    		break;
+    	}
+    	}   
+		}
+		}
+}
